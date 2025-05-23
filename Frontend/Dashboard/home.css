@@ -1,0 +1,446 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: url('https://a.travel-assets.com/findyours-php/viewfinder/images/res70/499000/499486-kanazawa-umimirai-library.jpg') no-repeat center center/cover;
+}
+#content {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+}
+    /* Header Styling */
+    /* Header Styling */
+    #hd {
+        background-color: #f4a261;
+        color: black;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 20px;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        margin-right: 20px;
+    }
+
+    /* Logo */
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+        white-space: nowrap;
+    }
+
+    /* Right Section (Search + Icons) */
+    .right-section {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-right: 30px;
+    }
+
+    /* Search Bar */
+    .search-bar {
+        display: flex;
+        align-items: center;
+        background: white;
+        border-radius: 5px;
+        padding: 5px;
+    }
+
+    .search-bar input {
+        width: 180px;
+        padding: 8px;
+        border: none;
+        outline: none;
+        font-size: 14px;
+    }
+
+    .search-bar button {
+        padding: 8px 12px;
+        background-color: #2a9d8f;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        color: white;
+        font-size: 14px;
+        transition: background 0.3s;
+    }
+
+    .search-bar button:hover {
+        background-color: #21867a;
+    }
+
+    /* Profile & Settings Icons */
+    .user-options {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .user-options img {
+        width: 28px;
+        height: 28px;
+        cursor: pointer;
+        transition: transform 0.3s;
+    }
+
+    .user-options img:hover {
+        transform: scale(1.1);
+    }
+
+
+/* Navbar */
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: rgba(24, 23, 23, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    width: 220px;
+    height: 100vh;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar h1 {
+    margin: 15px 0;
+    font-size: 18px;
+    color: white;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+    padding: 10px 0;
+}
+
+.navbar a:hover {
+    color: #f4a261;
+    text-decoration: underline;
+}
+
+/* Main Content */
+.mainB {
+    margin-left: 250px;
+    margin-top: 80px;
+    padding: 20px;
+    width: calc(100% - 270px);
+    min-height: 80vh;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Welcome Section */
+.welcome {
+    margin-left: 270px;
+    margin-top: 100px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    width: 70%;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Books Section */
+.books-section h2 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin: 20px 0;
+}
+
+.books-container, .categories-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.book, .category-card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    width: 220px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.book:hover, .category-card:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Book & Category Images */
+.book img, .category-card img {
+    width: 150px;
+    height: 200px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.category-card img {
+    height: 150px;
+}
+
+/* Categories Section */
+.categories {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.categories h2 {
+    font-size: 28px;
+    color: grey;
+}
+
+.category-card h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .navbar {
+        width: 180px;
+    }
+
+    .mainB {
+        margin-left: 200px;
+        width: calc(100% - 200px);
+    }
+
+    .welcome {
+        margin-left: 200px;
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .navbar {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-around;
+        position: relative;
+    }
+
+    .navbar h1 {
+        margin: 10px 0;
+        font-size: 16px;
+    }
+
+    .mainB, .welcome {
+        margin-left: 0;
+        width: 90%;
+    }
+
+    .books-container, .categories-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-bar input {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #hd {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    .search-bar input {
+        width: 180px;
+        padding: 8px;
+    }
+
+    .search-bar button {
+        padding: 8px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mainB, .welcome {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .book, .category-card {
+        width: 90%;
+    }
+}
+/* ✅ General Button Styling */
+/* General Button Styles */
+.auth-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    color: white;
+}
+
+/* 🎨 Login Button */
+#loginBtn {
+    background-color: #007bff;
+}
+
+#loginBtn:hover {
+    background-color: #0056b3;
+}
+
+/* 🎨 Register Button */
+#registerBtn {
+    background-color: #28a745;
+}
+
+#registerBtn:hover {
+    background-color: #1e7e34;
+}
+
+/* 🛑 Logout Button */
+#logoutBtn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+#logoutBtn:hover {
+    background-color: #a71d2a;
+}
+
+/* Latest Arrivals Section */
+.latest-arrivals {
+    margin-top: 40px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.latest-arrivals h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.latest-arrivals h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    margin: 10px auto 0;
+}
+
+/* Book Card Enhancements for Latest Arrivals */
+.latest-arrivals .book {
+    position: relative;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.latest-arrivals .book:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.new-badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: linear-gradient(45deg, #ff512f, #dd2476);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Animation for New Arrivals */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.latest-arrivals .books-container {
+    animation: pulse 3s infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .latest-arrivals .books-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .latest-arrivals .books-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .latest-arrivals h2 {
+        font-size: 24px;
+    }
+}

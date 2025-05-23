@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Books | Library</title>
+    <link rel="stylesheet" href="books.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id="hd">
+        <div class="logo">Library Management System</div>
+        <div class="right-section">
+            <div class="search-bar">
+                <input type="text" placeholder="Search for books...">
+                <button>Search</button>
+            </div>
+            <div class="user-options">
+                <img src="../profile-icon.png" alt="Profile Icon">
+                <img src="../settings-icon.png" alt="Settings Icon">
+            </div>
+            <div id="userOptions">
+                <a href="../Login/login.html" id="loginBtn" class="auth-btn">Login</a>
+                <a href="../Registration/register.html" id="registerBtn" class="auth-btn">Register</a>
+                <button id="logoutBtn" class="logout-btn" style="display: none;">Logout</button>
+            </div>
+        </div>
+    </header>
+    
+    <div class="navbar">
+        <h1 class="home"><a href="../home.html">Home</a></h1><br>
+        <h1 class="books"><a href="books.html">Books</a></h1><br>
+        <h1 class="profile"><a href="profile.html">Profile</a></h1><br>
+        <h1 class="about"><a href="about.html">About</a></h1><br>
+    </div>
+
+    <div class="content-container">
+        <div class="books-section">
+            <h2>★ Top Rated Books</h2>
+            <div class="top-rated-container">
+                <div class="books-grid" id="topRatedBooks"></div>
+            </div>
+            
+            <div class="categories-dropdown">
+                <label for="book-categories">Browse by Category:</label>
+                <select id="book-categories" onchange="filterByCategory()">
+                    <option value="all">All Categories</option>
+                    <option value="fiction">Fiction</option>
+                    <option value="non-fiction">Non-Fiction</option>
+                    <option value="science">Science</option>
+                    <option value="technology">Technology</option>
+                    <option value="biography">Biography</option>
+                    <option value="mystery">Mystery</option>
+                    <option value="self-help">Self-Help</option>
+                    <option value="history">History</option>
+                </select>
+            </div>
+            
+            <div class="category-display-area" id="categoryDisplay"></div>
+        </div>
+    </div>
+
+    <script src="books.js"></script>
+</body>
+</html>

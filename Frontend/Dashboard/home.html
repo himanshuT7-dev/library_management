@@ -1,0 +1,147 @@
+<html>
+    <head>
+        <title>Home</title>
+        <link rel="stylesheet" href="home.css">
+    </head>
+    <body>
+        
+        <header id="hd">
+            <div class="logo">Library Management System</div>
+            <div class="right-section">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for books...">
+                    <button>Search</button>
+                </div>
+                <div class="user-options">
+                    <img src="profile-icon.png" alt="Profile Icon">
+                    <img src="settings-icon.png" alt="Settings Icon">
+                </div>
+                <!-- Login & Register Buttons -->
+                <div id="userOptions">
+                    <a href="login.html" id="loginBtn" class="auth-btn">Login</a>
+                    <a href="register.html" id="registerBtn" class="auth-btn">Register</a>
+                    <button id="logoutBtn" class="logout-btn" style="display: none;">Logout</button>
+                </div>
+                
+            </div>
+        </header>
+        
+        <!-- Sidebar Navigation -->
+        <div class="navbar">
+            <h1 class="home"><a href="home.html">Home</a></h1><br>
+            <h1 class="books"><a href="./Books/books.html">Books</a></h1><br>
+            <h1 class="profile"><a href="profile.html">Profile</a></h1><br>
+            <h1 class="about"><a href="about.html">About</a></h1><br>
+        </div>
+    
+        <!-- Welcome Section -->
+        <div class="welcome">
+            <h1>Hello, Welcome to Library Management System</h1>
+            <p>Explore a vast collection of books, manage your profile, and stay updated with our latest arrivals.</p>
+        </div>
+    
+        <!-- Main Content -->
+        <div class="mainB">
+            <div class="latest-arrivals">
+                <h2>🌟 Latest Arrivals</h2>
+                <div class="books-container">
+                    <div class="book">
+                        <img src="new-book1.jpg" alt="Atomic Habits">
+                        <h3>Atomic Habits</h3>
+                        <p>James Clear's guide to building good habits and breaking bad ones.</p>
+                        <span class="new-badge">New</span>
+                    </div>
+                    <div class="book">
+                        <img src="new-book2.jpg" alt="The Midnight Library">
+                        <h3>The Midnight Library</h3>
+                        <p>Matt Haig's novel about the choices that go into a life well lived.</p>
+                        <span class="new-badge">New</span>
+                    </div>
+                    <div class="book">
+                        <img src="new-book3.jpg" alt="Project Hail Mary">
+                        <h3>Project Hail Mary</h3>
+                        <p>Andy Weir's new sci-fi adventure about a lone astronaut.</p>
+                        <span class="new-badge">New</span>
+                    </div>
+                    <div class="book">
+                        <img src="new-book4.jpg" alt="Klara and the Sun">
+                        <h3>Klara and the Sun</h3>
+                        <p>Kazuo Ishiguro's novel about what it means to love.</p>
+                        <span class="new-badge">New</span>
+                    </div>
+                </div>
+            </div>
+            <div class="books-section">
+                <h2>📖 Featured Books</h2>
+                <div class="books-container">
+                    <div class="book">
+                        <img src="book1.jpg" alt="The Great Gatsby">
+                        <h3>The Great Gatsby</h3>
+                        <p>A classic novel by F. Scott Fitzgerald, set in the 1920s, exploring themes of wealth and love.</p>
+                    </div>
+                    <div class="book">
+                        <img src="book2.jpg" alt="Java Programming">
+                        <h3>Java Programming</h3>
+                        <p>A beginner-friendly guide to Java programming, covering OOP concepts and practical examples.</p>
+                    </div>
+                    <div class="book">
+                        <img src="book3.jpg" alt="Data Structures & Algorithms">
+                        <h3>Data Structures & Algorithms</h3>
+                        <p>An essential book for computer science students, explaining key data structures and algorithms.</p>
+                    </div>
+                    <div class="book">
+                        <img src="book4.jpg" alt="Python for Data Science">
+                        <h3>Python for Data Science</h3>
+                        <p>A comprehensive guide to Python, focusing on data science, AI, and machine learning applications.</p>
+                    </div>
+                    <div class="book">
+                        <img src="book5.jpg" alt="Wings of Fire">
+                        <h3>Wings of Fire</h3>
+                        <p>A motivational book by APJ Abdul Kalam, focusing on the importance of hard work and perseverance.</p>
+                    </div>
+                </div>
+                
+    
+                <!-- Categories Section -->
+                <div class="categories">
+                    <h2 id="cat">📂 Explore Categories</h2>
+                    <div class="categories-container">
+                        <div class="category-card">
+                            <img src="fiction.jpg" alt="Fiction">
+                            <h3>📚 Fiction</h3>
+                        </div>
+                        <div class="category-card">
+                            <img src="nonfiction.jpg" alt="Non-Fiction">
+                            <h3>📘 Non-Fiction</h3>
+                        </div>
+                        <div class="category-card">
+                            <img src="science.jpg" alt="Science">
+                            <h3>🔬 Science</h3>
+                        </div>
+                        <div class="category-card">
+                            <img src="technology.jpg" alt="Technology">
+                            <h3>💻 Technology</h3>
+                        </div>
+                        <div class="category-card">
+                            <img src="biography.jpg" alt="Biography">
+                            <h3>📖 Biography</h3>
+                        </div>
+                        <div class="category-card">
+                            <img src="mystery.jpg" alt="Mystery">
+                            <h3>🕵️ Mystery</h3>
+                        </div>
+                        <div class="category-card">
+                            <img src="selfhelp.jpg" alt="Self-Help">
+                            <h3>📗 Self-Help</h3>
+                        </div>
+                        <div class="category-card">
+                            <img src="history.jpg" alt="History">
+                            <h3>🏛️ History</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>       
+        </div>
+        <script src="home.js"></script>
+    </body>
+</html>

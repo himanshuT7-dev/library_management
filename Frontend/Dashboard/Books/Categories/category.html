@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Category | Library</title>
+    <link rel="stylesheet" href="../books.css">
+    <link rel="stylesheet" href="category.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="category-page">
+    <header id="hd">
+        <div class="logo">Library Management System</div>
+        <div class="right-section">
+            <div class="search-bar">
+                <input type="text" placeholder="Search for books...">
+                <button>Search</button>
+            </div>
+            <div class="user-options">
+                <img src="../../profile-icon.png" alt="Profile Icon">
+                <img src="../../settings-icon.png" alt="Settings Icon">
+            </div>
+            <div id="userOptions">
+                <a href="../../Login/login.html" id="loginBtn" class="auth-btn">Login</a>
+                <a href="../../Registration/register.html" id="registerBtn" class="auth-btn">Register</a>
+                <button id="logoutBtn" class="logout-btn" style="display: none;">Logout</button>
+            </div>
+        </div>
+    </header>
+    
+    <div class="navbar">
+        <h1 class="home"><a href="../../home.html">Home</a></h1><br>
+        <h1 class="books"><a href="../books.html">Books</a></h1><br>
+        <h1 class="profile"><a href="profile.html">Profile</a></h1><br>
+        <h1 class="about"><a href="about.html">About</a></h1><br>
+    </div>
+
+    <div class="content-container">
+        <div class="category-breadcrumb">
+            <a href="../books.html">Books</a> &gt; <span id="current-category">Category</span>
+        </div>
+        
+        <div class="books-section">
+            <h2 id="category-title">Category Books</h2>
+            
+            <div class="category-filter">
+                <button class="active" data-filter="all">All</button>
+                <button data-filter="rating">Highest Rated</button>
+                <button data-filter="author">By Author</button>
+            </div>
+            
+            <div class="category-results" id="results-count">
+                Showing <span id="showing-count">0</span> of <span id="total-count">0</span> books
+            </div>
+            
+            <div class="books-grid" id="category-books"></div>
+            
+            <div class="pagination" id="pagination">
+                <button id="prevBtn">Previous</button>
+                <span id="pageInfo">Page 1 of 1</span>
+                <button id="nextBtn">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="category.js"></script>
+</body>
+</html>  category.html
