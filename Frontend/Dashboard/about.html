@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About Us | Library Management</title>
+        <script src="theme-loader.js"></script>
+        <link rel="stylesheet" href="home.css?v=2.0">
+    </head>
+    <body>
+        
+        <header id="hd">
+            <div class="logo">Library Management System</div>
+            <div class="right-section">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for books...">
+                    <button>Search</button>
+                </div>
+                <div class="user-options">
+                    <a href="profile.html"><img src="profile-icon.png" alt="Profile Icon"></a>
+                    <a href="settings.html"><img src="settings-icon.png" alt="Settings Icon"></a>
+                </div>
+                <!-- Login & Register Buttons -->
+                <div id="userOptions">
+                    <a href="Login/login.html" id="loginBtn" class="auth-btn">Login</a>
+                    <a href="Registration/register.html" id="registerBtn" class="auth-btn">Register</a>
+                    <button id="logoutBtn" class="logout-btn" style="display: none;">Logout</button>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Sidebar Navigation -->
+        <div class="navbar">
+            <h1 class="home"><a href="home.html">Home</a></h1><br>
+            <h1 class="books"><a href="./Books/books.html">Books</a></h1><br>
+            <h1 class="profile"><a href="profile.html">Profile</a></h1><br>
+            <h1 class="about"><a href="about.html">About</a></h1><br>
+        </div>
+    
+        <!-- Welcome Section -->
+        <div class="welcome">
+            <h1>About Our System</h1>
+            <p>A modern, database-driven Library Management System built with Java Spring Boot and JavaScript.</p>
+        </div>
+    
+        <!-- Main Content -->
+        <div class="mainB">
+            <div class="books-section" style="padding: 20px; line-height: 1.8;">
+                <h2>📘 About the Project</h2>
+                <p style="text-align: center; max-width: 800px; margin: 0 auto; font-size: 16px; color: #555;">
+                    This project is a modern Library Management System designed as a Bachelor's degree final year presentation. 
+                    It demonstrates secure user authentication, a RESTful API backend architecture, and dynamic front-end data binding.
+                </p>
+                <br>
+                <h3 style="text-align: center; margin-top: 20px;">Key Technologies Used:</h3>
+                <ul style="list-style: none; padding: 0; text-align: center; font-size: 16px; color: #333;">
+                    <li>💻 <strong>Frontend:</strong> HTML5, Vanilla CSS3, Javascript (ES6+, Fetch API)</li>
+                    <li>☕ <strong>Backend:</strong> Java Spring Boot, Spring Security, JPA Hibernate</li>
+                    <li>🗄️ <strong>Database:</strong> MySQL</li>
+                </ul>
+            </div>       
+        </div>
+        <script src="home.js"></script>
+    </body>
+</html>

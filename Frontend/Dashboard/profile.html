@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>User Profile | Library Management</title>
+        <script src="theme-loader.js"></script>
+        <link rel="stylesheet" href="home.css?v=2.0">
+    </head>
+    <body>
+        
+        <header id="hd">
+            <div class="logo">Library Management System</div>
+            <div class="right-section">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for books...">
+                    <button>Search</button>
+                </div>
+                <div class="user-options">
+                    <a href="profile.html"><img src="profile-icon.png" alt="Profile Icon"></a>
+                    <a href="settings.html"><img src="settings-icon.png" alt="Settings Icon"></a>
+                </div>
+                <!-- Login & Register Buttons -->
+                <div id="userOptions">
+                    <a href="Login/login.html" id="loginBtn" class="auth-btn">Login</a>
+                    <a href="Registration/register.html" id="registerBtn" class="auth-btn">Register</a>
+                    <button id="logoutBtn" class="logout-btn" style="display: none;">Logout</button>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Sidebar Navigation -->
+        <div class="navbar">
+            <h1 class="home"><a href="home.html">Home</a></h1><br>
+            <h1 class="books"><a href="./Books/books.html">Books</a></h1><br>
+            <h1 class="profile"><a href="profile.html">Profile</a></h1><br>
+            <h1 class="about"><a href="about.html">About</a></h1><br>
+        </div>
+    
+        <!-- Welcome Section -->
+        <div class="welcome">
+            <h1>User Profile Dashboard</h1>
+            <p>Manage your account credentials and see your library membership details.</p>
+        </div>
+    
+        <!-- Main Content -->
+        <div class="mainB">
+            <div class="books-section" style="padding: 20px; text-align: center;">
+                <h2>👤 Member Details</h2>
+                <div style="max-width: 400px; margin: 30px auto; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                    <img src="profile-icon.png" alt="Profile avatar" style="width: 100px; height: 100px; margin-bottom: 20px;">
+                    <h3 style="margin: 10px 0; color: #333;">Username:</h3>
+                    <h1 id="profileUsername" style="color: #007bff; margin: 0 0 20px 0;">Guest</h1>
+                    <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+                    <p style="color: #666; font-size: 14px;">Status: <strong>Active Member</strong></p>
+                    <p style="color: #666; font-size: 14px;">Role: <strong>User</strong></p>
+                </div>
+            </div>       
+        </div>
+        <script src="home.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const username = localStorage.getItem("username");
+                if (username) {
+                    document.getElementById("profileUsername").textContent = username;
+                } else {
+                    document.getElementById("profileUsername").textContent = "Guest (Not logged in)";
+                }
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home | Library Management</title>
+        <script src="theme-loader.js"></script>
+        <link rel="stylesheet" href="home.css?v=2.0">
+    </head>
+    <body>
+        
+        <header id="hd">
+            <div class="logo">Library Management System</div>
+            <div class="right-section">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for books...">
+                    <button>Search</button>
+                </div>
+                <div class="user-options">
+                    <a href="profile.html"><img src="profile-icon.png" alt="Profile Icon"></a>
+                    <a href="settings.html"><img src="settings-icon.png" alt="Settings Icon"></a>
+                </div>
+                <!-- Login & Register Buttons -->
+                <div id="userOptions">
+                    <a href="Login/login.html" id="loginBtn" class="auth-btn">Login</a>
+                    <a href="Registration/register.html" id="registerBtn" class="auth-btn">Register</a>
+                    <button id="logoutBtn" class="logout-btn" style="display: none;">Logout</button>
+                </div>
+                
+            </div>
+        </header>
+        
+        <!-- Sidebar Navigation -->
+        <div class="navbar">
+            <h1 class="home"><a href="home.html">Home</a></h1><br>
+            <h1 class="books"><a href="./Books/books.html">Books</a></h1><br>
+            <h1 class="profile"><a href="profile.html">Profile</a></h1><br>
+            <h1 class="about"><a href="about.html">About</a></h1><br>
+        </div>
+    
+        <!-- Welcome Section -->
+        <div class="welcome">
+            <h1>Hello, Welcome to Library Management System</h1>
+            <p>Explore a vast collection of books, manage your profile, and stay updated with our latest arrivals.</p>
+        </div>
+    
+        <!-- Main Content -->
+        <div class="mainB">
+            <div class="latest-arrivals">
+                <h2>🌟 Latest Arrivals</h2>
+                <div class="books-container">
+                    <div class="book">
+                        <img src="https://m.media-amazon.com/images/I/91bYsX41DVL.AC_UF1000,1000_QL80.jpg" alt="Atomic Habits">
+                        <h3>Atomic Habits</h3>
+                        <p>James Clear's guide to building good habits and breaking bad ones.</p>
+                        <span class="new-badge">New</span>
+                    </div>
+                    <div class="book">
+                        <img src="https://m.media-amazon.com/images/I/81J45elZ3tL.AC_UF1000,1000_QL80.jpg" alt="The Midnight Library">
+                        <h3>The Midnight Library</h3>
+                        <p>Matt Haig's novel about the choices that go into a life well lived.</p>
+                        <span class="new-badge">New</span>
+                    </div>
+                    <div class="book">
+                        <img src="https://m.media-amazon.com/images/I/81mD3sN+uGL.AC_UF1000,1000_QL80.jpg" alt="Project Hail Mary">
+                        <h3>Project Hail Mary</h3>
+                        <p>Andy Weir's new sci-fi adventure about a lone astronaut.</p>
+                        <span class="new-badge">New</span>
+                    </div>
+                    <div class="book">
+                        <img src="https://m.media-amazon.com/images/I/7185t194C0L.AC_UF1000,1000_QL80.jpg" alt="Klara and the Sun">
+                        <h3>Klara and the Sun</h3>
+                        <p>Kazuo Ishiguro's novel about what it means to love.</p>
+                        <span class="new-badge">New</span>
+                    </div>
+                </div>
+            </div>
+            <div class="books-section">
+                <h2>📖 Featured Books</h2>
+                <div class="books-container">
+                    <div class="book">
+                        <img src="https://m.media-amazon.com/images/I/71FTb9X6wsL.AC_UF1000,1000_QL80.jpg" alt="The Great Gatsby">
+                        <h3>The Great Gatsby</h3>
+                        <p>A classic novel by F. Scott Fitzgerald, set in the 1920s, exploring themes of wealth and love.</p>
+                    </div>
+                    <div class="book">
+                        <img src="https://m.media-amazon.com/images/I/71nI5G76nEL.AC_UF1000,1000_QL80.jpg" alt="Java Programming">
+                        <h3>Java Programming</h3>
+                        <p>A beginner-friendly guide to Java programming, covering OOP concepts and practical examples.</p>
+                    </div>
+                    <div class="book">
+                        <img src="https://m.media-amazon.com/images/I/61k99u+sA1L.AC_UF1000,1000_QL80.jpg" alt="Data Structures & Algorithms">
+                        <h3>Data Structures & Algorithms</h3>
+                        <p>An essential book for computer science students, explaining key data structures and algorithms.</p>
+                    </div>
+                    <div class="book">
+                        <img src="https://m.media-amazon.com/images/I/81x1A49LelL.AC_UF1000,1000_QL80.jpg" alt="Python for Data Science">
+                        <h3>Python for Data Science</h3>
+                        <p>A comprehensive guide to Python, focusing on data science, AI, and machine learning applications.</p>
+                    </div>
+                    <div class="book">
+                        <img src="https://m.media-amazon.com/images/I/813uPMOnW8L.AC_UF1000,1000_QL80.jpg" alt="Wings of Fire">
+                        <h3>Wings of Fire</h3>
+                        <p>A motivational book by APJ Abdul Kalam, focusing on the importance of hard work and perseverance.</p>
+                    </div>
+                </div>
+                
+                <!-- Categories Section -->
+                <div class="categories">
+                    <h2 id="cat">📂 Explore Categories</h2>
+                    <div class="categories-container">
+                        <a href="Books/Categories/category.html?category=fiction" style="text-decoration: none; color: inherit;">
+                            <div class="category-card">
+                                <img src="https://images.unsplash.com/photo-1543002588-bfa74002ed7e?q=80&w=300&auto=format&fit=crop" alt="Fiction">
+                                <h3>📚 Fiction</h3>
+                            </div>
+                        </a>
+                        <a href="Books/Categories/category.html?category=non-fiction" style="text-decoration: none; color: inherit;">
+                            <div class="category-card">
+                                <img src="https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?q=80&w=300&auto=format&fit=crop" alt="Non-Fiction">
+                                <h3>📘 Non-Fiction</h3>
+                            </div>
+                        </a>
+                        <a href="Books/Categories/category.html?category=science" style="text-decoration: none; color: inherit;">
+                            <div class="category-card">
+                                <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=300&auto=format&fit=crop" alt="Science">
+                                <h3>🔬 Science</h3>
+                            </div>
+                        </a>
+                        <a href="Books/Categories/category.html?category=technology" style="text-decoration: none; color: inherit;">
+                            <div class="category-card">
+                                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=300&auto=format&fit=crop" alt="Technology">
+                                <h3>💻 Technology</h3>
+                            </div>
+                        </a>
+                        <a href="Books/Categories/category.html?category=biography" style="text-decoration: none; color: inherit;">
+                            <div class="category-card">
+                                <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=300&auto=format&fit=crop" alt="Biography">
+                                <h3>📖 Biography</h3>
+                            </div>
+                        </a>
+                        <a href="Books/Categories/category.html?category=mystery" style="text-decoration: none; color: inherit;">
+                            <div class="category-card">
+                                <img src="https://images.unsplash.com/photo-1509248961158-e54f6934749c?q=80&w=300&auto=format&fit=crop" alt="Mystery">
+                                <h3>🕵️ Mystery</h3>
+                            </div>
+                        </a>
+                        <a href="Books/Categories/category.html?category=self-help" style="text-decoration: none; color: inherit;">
+                            <div class="category-card">
+                                <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=300&auto=format&fit=crop" alt="Self-Help">
+                                <h3>📗 Self-Help</h3>
+                            </div>
+                        </a>
+                        <a href="Books/Categories/category.html?category=history" style="text-decoration: none; color: inherit;">
+                            <div class="category-card">
+                                <img src="https://images.unsplash.com/photo-1461360370896-922624d12aa1?q=80&w=300&auto=format&fit=crop" alt="History">
+                                <h3>🏛️ History</h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>       
+        </div>
+        <script src="home.js"></script>
+    </body>
+</html>

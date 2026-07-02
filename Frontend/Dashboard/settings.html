@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Settings | Library Management</title>
+        <script src="theme-loader.js"></script>
+        <link rel="stylesheet" href="home.css?v=2.0">
+        <style>
+            .settings-container {
+                max-width: 600px;
+                margin: 0 auto;
+                padding: 10px;
+            }
+            .settings-card {
+                background: white;
+                padding: 25px;
+                border-radius: 12px;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+                margin-bottom: 25px;
+                text-align: left;
+            }
+            .settings-card h3 {
+                margin-top: 0;
+                color: #2a9d8f;
+                font-size: 20px;
+                border-bottom: 2px solid #f4a261;
+                padding-bottom: 10px;
+            }
+            .settings-option {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 20px 0;
+            }
+            .settings-option label {
+                font-size: 16px;
+                font-weight: bold;
+                color: #333;
+            }
+            /* Toggle Switch */
+            .toggle-switch {
+                position: relative;
+                display: inline-block;
+                width: 50px;
+                height: 26px;
+            }
+            .toggle-switch input {
+                opacity: 0;
+                width: 0;
+                height: 0;
+            }
+            .slider {
+                position: absolute;
+                cursor: pointer;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: #ccc;
+                transition: .3s;
+                border-radius: 34px;
+            }
+            .slider:before {
+                position: absolute;
+                content: "";
+                height: 18px;
+                width: 18px;
+                left: 4px;
+                bottom: 4px;
+                background-color: white;
+                transition: .3s;
+                border-radius: 50%;
+            }
+            input:checked + .slider {
+                background-color: #2a9d8f;
+            }
+            input:checked + .slider:before {
+                transform: translateX(24px);
+            }
+            select {
+                padding: 8px 12px;
+                border-radius: 6px;
+                border: 1px solid #ccc;
+                font-size: 14px;
+                background-color: white;
+                outline: none;
+                cursor: pointer;
+            }
+            .btn-danger {
+                background-color: #e76f51;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 6px;
+                font-weight: bold;
+                cursor: pointer;
+                transition: background 0.3s;
+            }
+            .btn-danger:hover {
+                background-color: #d85a38;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <header id="hd">
+            <div class="logo">Library Management System</div>
+            <div class="right-section">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for books...">
+                    <button>Search</button>
+                </div>
+                <div class="user-options">
+                    <a href="profile.html"><img src="profile-icon.png" alt="Profile Icon"></a>
+                    <a href="settings.html"><img src="settings-icon.png" alt="Settings Icon"></a>
+                </div>
+                <!-- Login & Register Buttons -->
+                <div id="userOptions">
+                    <a href="Login/login.html" id="loginBtn" class="auth-btn">Login</a>
+                    <a href="Registration/register.html" id="registerBtn" class="auth-btn">Register</a>
+                    <button id="logoutBtn" class="logout-btn" style="display: none;">Logout</button>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Sidebar Navigation -->
+        <div class="navbar">
+            <h1 class="home"><a href="home.html">Home</a></h1><br>
+            <h1 class="books"><a href="./Books/books.html">Books</a></h1><br>
+            <h1 class="profile"><a href="profile.html">Profile</a></h1><br>
+            <h1 class="about"><a href="about.html">About</a></h1><br>
+        </div>
+    
+        <!-- Welcome Section -->
+        <div class="welcome">
+            <h1>Application Settings</h1>
+            <p>Customize the interface theme, accessibility options, and user preferences.</p>
+        </div>
+    
+        <!-- Main Content -->
+        <div class="mainB">
+            <div class="settings-container">
+                
+                <!-- Theme Preferences -->
+                <div class="settings-card">
+                    <h3>🎨 Display Settings</h3>
+                    <div class="settings-option">
+                        <label for="themeToggle">Dark Mode Theme</label>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="themeToggle">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Font Size Settings -->
+                <div class="settings-card">
+                    <h3>🔍 Accessibility</h3>
+                    <div class="settings-option">
+                        <label for="fontSizeSelect">Font Size</label>
+                        <select id="fontSizeSelect">
+                            <option value="small">Small</option>
+                            <option value="medium" selected>Normal</option>
+                            <option value="large">Large</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Cache & Reset -->
+                <div class="settings-card">
+                    <h3>⚠️ System Settings</h3>
+                    <div class="settings-option">
+                        <div>
+                            <label style="display: block;">Reset Application</label>
+                            <span style="font-size: 13px; color: #777;">Clear all cache, stored settings, and log out.</span>
+                        </div>
+                        <button id="resetBtn" class="btn-danger">Reset All</button>
+                    </div>
+                </div>
+
+            </div>       
+        </div>
+        <script src="home.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const themeToggle = document.getElementById("themeToggle");
+                const fontSizeSelect = document.getElementById("fontSizeSelect");
+                const resetBtn = document.getElementById("resetBtn");
+
+                // 1. Initial State Setup
+                const currentTheme = localStorage.getItem("appTheme") || "light";
+                themeToggle.checked = (currentTheme === "dark");
+
+                const currentFontSize = localStorage.getItem("appFontSize") || "medium";
+                fontSizeSelect.value = currentFontSize;
+
+                // 2. Theme Toggle Listener
+                themeToggle.addEventListener("change", function() {
+                    const newTheme = this.checked ? "dark" : "light";
+                    localStorage.setItem("appTheme", newTheme);
+                    if (newTheme === "dark") {
+                        document.documentElement.classList.add("dark-theme");
+                    } else {
+                        document.documentElement.classList.remove("dark-theme");
+                    }
+                });
+
+                // 3. Font Size Listener
+                fontSizeSelect.addEventListener("change", function() {
+                    const newSize = this.value;
+                    localStorage.setItem("appFontSize", newSize);
+                    document.documentElement.setAttribute("data-font-size", newSize);
+                });
+
+                // 4. Reset Button Listener
+                resetBtn.addEventListener("click", function() {
+                    if (confirm("Are you sure you want to reset all preferences? This will log you out.")) {
+                        localStorage.clear();
+                        window.location.href = "home.html";
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
